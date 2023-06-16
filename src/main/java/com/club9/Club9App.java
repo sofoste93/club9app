@@ -10,9 +10,9 @@ import java.io.IOException;
 public class Club9App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Club9 FundCycle - Admin Login");
+        stage.setTitle("Club9 Fund Tracker.");
         stage.setScene(scene);
         stage.show();
     }

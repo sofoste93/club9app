@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.club9.controllers.RegistrationController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label alignment="CENTER" layoutX="28.0" layoutY="14.0" prefHeight="17.0" prefWidth="561.0" text="- - -" fx:id="statusText" />
+    <Label alignment="CENTER" layoutX="88.0" layoutY="58.0" prefHeight="62.0" prefWidth="425.0"
+           text="CREATE AN ACCOUNT"/>
+    <Button layoutX="221.0" layoutY="336.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="88.0" text="BACK"/>
+    <Button layoutX="342.0" layoutY="336.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="121.0"
+            text="REGISTER" onAction="#onRegisterClick"/>
+    <Label alignment="CENTER" layoutX="221.0" layoutY="418.0" prefHeight="17.0" prefWidth="88.0" text="Back home"/>
+    <Label alignment="CENTER" layoutX="341.0" layoutY="418.0" prefHeight="17.0" prefWidth="121.0"
+           text="create an account"/>
+    <TextField fx:id="usernameField" layoutX="221.0" layoutY="142.0" prefHeight="51.0" prefWidth="241.0"/>
+    <Label layoutX="42.0" layoutY="142.0" prefHeight="51.0" prefWidth="148.0" text="CHOOSE AN USERNAME:"/>
+    <Label layoutX="42.0" layoutY="222.0" prefHeight="51.0" prefWidth="148.0" text="CHOOSE A PASSWORD:"/>
+    <PasswordField fx:id="passwordField" layoutX="221.0" layoutY="222.0" prefHeight="51.0" prefWidth="241.0"/>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="510.0" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.14-internal"
+      fx:controller="com.club9.controllers.DashboardController">
+    <Label alignment="CENTER" layoutX="28.0" layoutY="14.0" prefHeight="17.0" prefWidth="561.0" text=" " fx:id="welcomeText" />
+    <ListView fx:id="memberListView" />
+    <Text text="Exclusively member of the club9" />
+</VBox>
