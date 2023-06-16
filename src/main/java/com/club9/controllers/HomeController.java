@@ -18,10 +18,10 @@ public class HomeController {
 
     public void initialize() {
         admin = new Admin("admin", "password");
-        assignMemberForMonth();
+        /*assignMemberForMonth();*/
         refreshMembers();
 
-        Member assignedMember = Admin.getRandomMember(); // TODO: Replace this with real data fetching
+        Member assignedMember = admin.getRandomMember(); // TODO: Replace this with real data fetching
 
         if (assignedMember != null) {
             assignedMemberName.setText(assignedMember.getName());
@@ -30,12 +30,12 @@ public class HomeController {
         }
     }
 
-    public void assignMemberForMonth() {
-        Member member = admin.getRandomMember();
+    /*public void assignMemberForMonth() {
+        Member member = getRandomMember();
         if (member != null) {
             member.setAssigned(true);
         }
-    }
+    }*/
 
     public void refreshMembers() {
             memberListView.getItems().setAll(admin.getMembers());

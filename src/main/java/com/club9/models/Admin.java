@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Admin {
     private String username;
     private String password;
-    private List<Member> members;  // Here's the change
+    private static List<Member> members;  // Here's the change
 
     public Admin(String username, String password) {
         this.username = username;
@@ -37,13 +37,13 @@ public class Admin {
     }
 
     public void setMembers(List<Member> members) {
-        this.members = members;
+        Admin.members = members;
     }
 
     public Member getRandomMember() {
         List<Member> notAssignedMembers = members.stream()
                 .filter(member -> !member.isAssigned())
-                .collect(Collectors.toList());
+                .toList();
 
         if (!notAssignedMembers.isEmpty()) {
             int randomIndex = new Random().nextInt(notAssignedMembers.size());
