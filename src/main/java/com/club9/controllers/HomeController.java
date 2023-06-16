@@ -1,24 +1,46 @@
 package com.club9.controllers;
 
-import javafx.event.ActionEvent;
+import com.club9.models.Admin;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import com.club9.models.Member;
+import javafx.scene.control.ListView;
+import javafx.scene.text.Text;
+
 
 public class HomeController {
 
-    public void openMemberManagement(ActionEvent actionEvent) {
+    public Text assignedMemberName;
+    @FXML
+        private ListView<Member> memberListView;
 
+        private Admin admin;
+
+
+    public void initialize() {
+        admin = new Admin("admin", "password");
+        assignMemberForMonth();
+        refreshMembers();
+
+        Member assignedMember = Admin.getRandomMember(); // TODO: Replace this with real data fetching
+
+        if (assignedMember != null) {
+            assignedMemberName.setText(assignedMember.getName());
+        } else {
+            assignedMemberName.setText("No member assigned for this month.");
+        }
     }
 
-    public void openMonthManagement(ActionEvent actionEvent) {
-
+    public void assignMemberForMonth() {
+        Member member = admin.getRandomMember();
+        if (member != null) {
+            member.setAssigned(true);
+        }
     }
 
-    public void exportData(ActionEvent actionEvent) {
+    public void refreshMembers() {
+            memberListView.getItems().setAll(admin.getMembers());
+        }
 
-    }
+        // TODO: Add methods to handle other actions (e.g. notifications, adding/deleting members, etc.)
 
-    public void importData(ActionEvent actionEvent) {
-
-    }
 }
