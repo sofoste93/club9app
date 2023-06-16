@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="510.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club9.controllers.HomeController">
+    <Button onAction="#openMemberManagement" text="Member Management" />
+    <Button onAction="#openMonthManagement" text="Month Management" />
+    <Button onAction="#exportData" text="Export Data" />
+    <Button onAction="#importData" text="Import Data" />
+</VBox>
