@@ -2,6 +2,7 @@ package com.club9.utility;
 
 // Class FileHandler.java
 
+import com.club9.models.Contribution;
 import com.club9.models.User;
 
 import java.io.*;
@@ -51,5 +52,16 @@ public class FileHandler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    // Method to read contributions from the file
+    public static List<Contribution> readContributions() {
+        // Implement reading contributions from a file similar to the readUsers method
+        return null;
+    }
+
+    // Method to save a contribution to the file
+    public static void saveContribution(Contribution contribution) {
+        // Implement saving contributions to a file similar to the saveUser method
     }
 }

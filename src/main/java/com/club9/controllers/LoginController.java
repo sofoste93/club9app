@@ -1,27 +1,19 @@
-// Class LoginController.java
-
 package com.club9.controllers;
 
-import com.club9.models.User;
+import com.club9.models.*;
 import com.club9.utility.FileHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.*;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class LoginController {
     @FXML
-    private TextField usernameField;
+    public TextField usernameField;
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -36,7 +28,9 @@ public class LoginController {
 
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                // Login successful. Navigate to Dashboard.
+                // Login successful. Set current user and navigate to Dashboard.
+                SessionManager.setCurrentUser(user);
+
                 try {
                     // Get the current stage
                     Node node = (Node) event.getSource();
@@ -44,7 +38,7 @@ public class LoginController {
 
                     // Load the new scene
                     Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/club9/Dashboard.fxml")));
-                    Scene scene = new Scene(root);
+                    Scene scene = new Scene(root, 800, 600);
 
                     // Set the new scene to the stage
                     stage.setScene(scene);

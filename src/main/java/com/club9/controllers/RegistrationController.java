@@ -1,7 +1,5 @@
 package com.club9.controllers;
 
-// Class RegistrationController.java
-
 import com.club9.models.User;
 import com.club9.utility.FileHandler;
 import javafx.fxml.FXML;
@@ -28,7 +26,6 @@ public class RegistrationController {
 
         for (User user : users) {
             if (user.getUsername().equals(username)) {
-                // Username is already taken. Show an error message
                 statusText.setText("Username is already taken");
                 return;
             }
