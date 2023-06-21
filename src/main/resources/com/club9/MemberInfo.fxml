@@ -3,8 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="429.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club9.controllers.MemberInfoController">
-    <VBox>
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club9.controllers.MemberInfoController">
+    <VBox spacing="10">
     <TableView fx:id="tableView" prefHeight="423.0" prefWidth="359.0">
         <columns>
             <TableColumn fx:id="userColumn" prefWidth="117.0" text="User" />
@@ -12,6 +12,8 @@
             <TableColumn fx:id="dateColumn" prefWidth="109.0" text="Date" />
         </columns>
     </TableView>
+        <Button layoutX="297.0" layoutY="336.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="88.0" text="BACK"/>
+        <Button onAction="#gotoDashboard" layoutX="414.0" layoutY="336.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="121.0" text="DASHBOARD"/>
 </VBox>
 
 </AnchorPane>

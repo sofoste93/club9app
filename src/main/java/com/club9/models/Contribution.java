@@ -1,18 +1,24 @@
 package com.club9.models;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Contribution {
     private User user;
     private double amount;
-    private LocalDateTime date;
+    private LocalDateTime contributionDate;
 
+    // Constructor without date (uses current date)
     public Contribution(User user, double amount) {
-        this.user = user;
-        this.amount = amount;
-        this.date = LocalDateTime.now();
+        this(user, amount, LocalDateTime.now());
     }
 
+    // Constructor with date
+    public Contribution(User user, double amount, LocalDateTime date) {
+        this.user = user;
+        this.amount = amount;
+        this.contributionDate = date;
+    }
     public User getUser() {
         return user;
     }
@@ -29,11 +35,15 @@ public class Contribution {
         this.amount = amount;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public LocalDateTime getContributionDate() {
+        return contributionDate;
+    }
+    public String getFormattedContributionDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        return this.contributionDate.format(formatter);
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setContributionDate(LocalDateTime contributionDate) {
+        this.contributionDate = contributionDate;
     }
 }

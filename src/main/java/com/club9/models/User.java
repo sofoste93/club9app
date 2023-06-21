@@ -9,6 +9,11 @@ public class User {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return username;
+    }
+
     public String getUsername() {
         return username;
     }

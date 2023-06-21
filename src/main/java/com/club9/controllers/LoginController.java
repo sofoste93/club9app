@@ -37,7 +37,7 @@ public class LoginController {
                     Stage stage = (Stage) node.getScene().getWindow();
 
                     // Load the new scene
-                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/club9/Dashboard.fxml")));
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/club9/MemberInfo.fxml")));
                     Scene scene = new Scene(root, 800, 600);
 
                     // Set the new scene to the stage
