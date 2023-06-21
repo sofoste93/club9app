@@ -2,6 +2,7 @@ package com.club9.utility;
 
 // Class FileHandler.java
 
+import com.club9.models.Admin;
 import com.club9.models.Contribution;
 import com.club9.models.User;
 
@@ -13,6 +14,7 @@ public class FileHandler {
     private static final String DATA_FOLDER = "data";
     private static final String CONTRIBUTION_FILE = "contributions.txt";
     private static final String USER_FILE = "userdata.txt";
+    private static final String ADMIN_FILE = "admin-data.txt";
 
     // Method to read users from the file
     public static List<User> readUsers() {
@@ -99,6 +101,22 @@ public class FileHandler {
         File file = new File(dir, CONTRIBUTION_FILE);
         try (FileWriter writer = new FileWriter(file, true)) {
             writer.write(contribution.getUser().getUsername() + "," + contribution.getAmount() + "," + contribution.getContributionDate() + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void saveAdmin(Admin admin) {
+        File dir = new File(DATA_FOLDER);
+        // If the directory doesn't exist, create it
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+
+        File file = new File(dir, ADMIN_FILE);
+        try (FileWriter writer = new FileWriter(file, true)) {
+            writer.write(admin.getUsername() + "," + admin.getPin() + "," + admin.getSecretWord() + "\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
