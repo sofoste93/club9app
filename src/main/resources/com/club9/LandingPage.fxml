@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.club9.controllers.LandingPageController">
+    <Label alignment="CENTER" layoutX="88.0" layoutY="58.0" prefHeight="62.0" prefWidth="425.0" text="WELCOME TO CLUB9 APP" />
+    <Button layoutX="63.0" layoutY="257.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="155.0" text="LOGIN" />
+    <Button layoutX="358.0" layoutY="257.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="155.0" text="REGISTER" />
+    <Label alignment="CENTER" layoutX="63.0" layoutY="339.0" prefHeight="17.0" prefWidth="155.0" text="Having an account ?" />
+    <Label alignment="CENTER" layoutX="358.0" layoutY="339.0" prefHeight="17.0" prefWidth="155.0" text="Become a member today" />
+</AnchorPane>

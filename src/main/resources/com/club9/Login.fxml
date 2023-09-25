@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.club9.controllers.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label alignment="CENTER" layoutX="28.0" layoutY="14.0" prefHeight="17.0" prefWidth="561.0" text="- - -" fx:id="statusText" />
+    <Label alignment="CENTER" layoutX="88.0" layoutY="58.0" prefHeight="62.0" prefWidth="425.0"
+           text="LOGIN INTO YOUR ACCOUNT"/>
+    <Button layoutX="297.0" layoutY="336.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="88.0" text="BACK"/>
+    <Button onAction="#onLoginClick" layoutX="414.0" layoutY="336.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="121.0" text="LOGIN"/>
+    <Label alignment="CENTER" layoutX="297.0" layoutY="418.0" prefHeight="17.0" prefWidth="88.0" text="Back home"/>
+    <Label alignment="CENTER" layoutX="407.0" layoutY="418.0" prefHeight="17.0" prefWidth="136.0"
+           text="Login to continue"/>
+    <TextField fx:id="usernameField" layoutX="294.0" layoutY="142.0" prefHeight="51.0" prefWidth="241.0"/>
+    <Label layoutX="164.0" layoutY="142.0" prefHeight="51.0" prefWidth="121.0" text="USERNAME:"/>
+    <Label layoutX="164.0" layoutY="222.0" prefHeight="51.0" prefWidth="121.0" text="PASSKEY:"/>
+    <PasswordField fx:id="passwordField" layoutX="294.0" layoutY="222.0" prefHeight="51.0" prefWidth="241.0"/>
+</AnchorPane>
