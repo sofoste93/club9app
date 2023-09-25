@@ -4,7 +4,7 @@ public class Month {
     private String name;
     private Member assignedMember;
 
-    public Month(String name, Member assignedMember) {
+    public Month(String name) {
         this.name = name;
         this.assignedMember = assignedMember;
     }
@@ -23,5 +23,9 @@ public class Month {
 
     public void setAssignedMember(Member assignedMember) {
         this.assignedMember = assignedMember;
+    }
+
+    public Month getMember() {
+        return null;
     }
 }

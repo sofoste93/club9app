@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.club9.controllers.MonthController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<?import javafx.scene.control.ListView?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club9.controllers.MonthController">
+    <Text layoutX="14.0" layoutY="27.0" text="The member for this month is:" wrappingWidth="159.66796875" />
+    <Text fx:id="memberNameLabel" layoutX="233.0" layoutY="26.0" wrappingWidth="134.0" />
+    <ListView fx:id="monthListView" />
 </AnchorPane>

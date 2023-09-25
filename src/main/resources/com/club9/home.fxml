@@ -2,13 +2,34 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.text.Text?>
-<VBox alignment="CENTER" prefHeight="450.0" prefWidth="510.0" spacing="20.0"
-      xmlns:fx="http://javafx.com/fxml" fx:controller="com.club9.controllers.HomeController">
-    <Label text="Club9 Members"/>
-    <ListView fx:id="memberListView"/>
-    <Text text="Assigned Member for This Month:" />
-    <Text fx:id="assignedMemberName" />
-    <Button text="Refresh" onAction="#refreshMembers"/>
-</VBox>
+<AnchorPane prefHeight="698.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.club9.controllers.HomeController">
+
+    <VBox alignment="CENTER" layoutX="14.0" layoutY="56.0" prefHeight="585.0" prefWidth="676.0" spacing="20.0">
+        <Label prefHeight="39.0" prefWidth="114.0" text="Club9 Members" />
+        <ListView fx:id="memberListView" />
+        <Text text="Assigned Member for This Month:" />
+        <Text fx:id="assignedMemberName" />
+        <Button onAction="#randomize" text="Randomize" />
+        <TabPane>
+            <Tab text="Members">
+                <content>
+                    <fx:include source="member.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Months">
+                <content>
+                    <fx:include source="month.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Notifications">
+                <content>
+                    <fx:include source="notification.fxml" />
+                </content>
+            </Tab>
+        </TabPane>
+        <Button onAction="#refreshMembers" text="Refresh" />
+    </VBox>
+
+</AnchorPane>
